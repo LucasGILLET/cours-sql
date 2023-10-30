@@ -41,3 +41,40 @@ CREATE TABLE articles_tags (
     CONSTRAINT fk_articles_tags_1 FOREIGN KEY(article_id) REFERENCES articles(id),
     CONSTRAINT fk_articles_tags_2 FOREIGN KEY(tag_id) REFERENCES tags(id)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Créer un script SQL qui va peupler la BDD grâce à une IA (parce que bon le faire soi-même hein...)
+
+-- Insertion de données dans la table "articles"
+INSERT INTO articles (title, description, content) VALUES
+('Article 1', 'Description de l article 1', 'Contenu de l article 1'),
+('Article 2', 'Description de l article 2', 'Contenu de l article 2'),
+('Article 3', 'Description de l article 3', 'Contenu de l article 3');
+
+-- Insertion de données dans la table "tags"
+INSERT INTO tags (name, color) VALUES
+('Tag 1', 'Rouge'),
+('Tag 2', 'Bleu'),
+('Tag 3', 'Vert');
+
+-- Insertion de données dans la table "comments"
+INSERT INTO comments (content, article_id) VALUES
+('Commentaire 1 pour l article 1', 1),
+('Commentaire 2 pour l article 1', 1),
+('Commentaire 1 pour l article 2', 2);
+
+-- Insertion de données dans la table "articles_tags" (associations entre articles et tags)
+INSERT INTO articles_tags (article_id, tag_id) VALUES
+(1, 1),
+(1, 2),
+(2, 2),
+(3, 3);
+
+
+-- Ecrire une requete SQL qui va compter le nombre d'articles associés à un tag précis
+SELECT * FROM articles WHERE -tag_id- == 2;
+-- INNER JOIN table_2 ON table_1.fk_id = table_2.id;
+
+
+-- Ecrire une requete SQL qui va afficher le nombre de commentaires par article
+
+
