@@ -81,10 +81,10 @@
     ('Guerrier', 'rouge');
 
     -- Insertion de données dans la table "skills"
-    INSERT INTO skills (name, damages) VALUES
-    ('Boule de feu', 10),
-    ('Main éléctrique', 3),
-    ('Pique de glace', 6);
+    INSERT INTO skills (name, damages, mana_cost) VALUES
+    ('Boule de feu', 10, 15),
+    ('Main éléctrique', 3, 4),
+    ('Pique de glace', 6, 10);
 
     -- Insérer des guilds (guildes) factices
     INSERT INTO guilds (name, guild_level, total_players) VALUES
