@@ -1,0 +1,13 @@
+thibaud.arros@gmail.com
+
+
+
+
+MCD : Modèle Conceptuel de Données
+=> Entités, Français ? PascalCase, Schéma
+
+MLD : Modèle Logique de Données : adapte le MCD à un type de BDD
+=> tables, Anglais, lowercase, pluriel, potentiellement textuel, clées étrangères avec "#user_id"
+
+MPD : Modèle Physique de Données : adapte un MLD à un SGBD
+=> va ressembler à un script SQL le plus souvent ?

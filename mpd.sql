@@ -52,9 +52,9 @@ INSERT INTO articles (title, description, content) VALUES
 
 -- Insertion de données dans la table "tags"
 INSERT INTO tags (name, color) VALUES
-('Tag 1', 'Rouge'),
-('Tag 2', 'Bleu'),
-('Tag 3', 'Vert');
+('HTML', 'Rouge'),
+('CSS', 'Bleu'),
+('JavaScript', 'Vert');
 
 -- Insertion de données dans la table "comments"
 INSERT INTO comments (content, article_id) VALUES
@@ -71,10 +71,13 @@ INSERT INTO articles_tags (article_id, tag_id) VALUES
 
 
 -- Ecrire une requete SQL qui va compter le nombre d'articles associés à un tag précis
-SELECT * FROM articles WHERE -tag_id- == 2;
--- INNER JOIN table_2 ON table_1.fk_id = table_2.id;
+SELECT COUNT(articles.id) FROM articles 
+INNER JOIN articles_tags ON articles.id = articles_tags.article_id
+INNER JOIN tags ON articles_tags.tag_id = tags.id
+WHERE tags.name = "HTML";
 
 
 -- Ecrire une requete SQL qui va afficher le nombre de commentaires par article
-
-
+SELECT articles.title, COUNT(comments.id) AS nb_com FROM articles
+INNER JOIN comments ON comments.article_id = articles.id
+GROUP BY articles.id;
