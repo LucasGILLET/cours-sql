@@ -1,4 +1,4 @@
-players(id, name, life_points, mana_points, xp_points, #guild_id, #class_id)
+players(id, name, life_points, mana_points, xp_points, glory_points, #guild_id, #class_id)
 classes(id, name, color)
 confrontations(id, #player_1_id, #player_2_id, is_victory, date_confrontation, glory_points)
 skills(id, name, damages, mana_cost)

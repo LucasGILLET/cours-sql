@@ -32,6 +32,7 @@
         life_points INT,
         mana_points INT,
         xp_points INT,
+        glory_points INT,
         guild_id INT NOT NULL,
         class_id INT NOT NULL,
         PRIMARY KEY (id),
@@ -93,10 +94,10 @@
     ('Guild C', 3, 12);
 
     -- Insérer des joueurs (players) avec des guild_id et class_id existants
-    INSERT INTO players (name, life_points, mana_points, xp_points, guild_id, class_id) VALUES
-    ('Player 1', 100, 50, 500, 1, 1),
-    ('Player 2', 120, 60, 600, 1, 2),
-    ('Player 3', 90, 40, 450, 2, 2);
+    INSERT INTO players (name, life_points, mana_points, xp_points, guild_id, class_id, glory_points) VALUES
+    ('Player 1', 100, 50, 500, 1, 1, 70),
+    ('Player 2', 120, 60, 600, 1, 2, 35),
+    ('Player 3', 90, 40, 450, 2, 2, 40);
 
     -- Insérer des confrontations factices avec player_1_id et player_2_id existants
     INSERT INTO confrontations (player_1_id, player_2_id, is_victory, glory_points) VALUES
