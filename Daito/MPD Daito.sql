@@ -89,21 +89,24 @@
 
     -- Insérer des guilds (guildes) factices
     INSERT INTO guilds (name, guild_level, total_players) VALUES
-    ('Guild A', 1, 10),
-    ('Guild B', 2, 8),
-    ('Guild C', 3, 12);
+    ('Dronix', 2, 2),
+    ('Alphata', 2, 1),
+    ('Jyraton', 3, 0);
 
     -- Insérer des joueurs (players) avec des guild_id et class_id existants
     INSERT INTO players (name, life_points, mana_points, xp_points, guild_id, class_id, glory_points) VALUES
-    ('Player 1', 100, 50, 500, 1, 1, 70),
-    ('Player 2', 120, 60, 600, 1, 2, 35),
-    ('Player 3', 90, 40, 450, 2, 2, 40);
+    ('Bernard', 100, 50, 500, 1, 1, 70),
+    ('Jules', 120, 60, 600, 1, 2, 35),
+    ('Juliette', 90, 40, 450, 2, 2, 40);
 
     -- Insérer des confrontations factices avec player_1_id et player_2_id existants
     INSERT INTO confrontations (player_1_id, player_2_id, is_victory, glory_points) VALUES
     (1, 2, true, 100),
     (1, 3, false, 50),
-    (2, 3, true, 80);
+    (2, 1, true, 80),
+    (3, 1, false, 50),
+    (2, 3, true, 80),
+    (1, 2, true, 40);
 
     -- Insérer des liens entre des joueurs et des compétences
     INSERT INTO players_skills (player_id, skill_id) VALUES
