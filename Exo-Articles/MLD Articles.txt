@@ -1,0 +1,4 @@
+articles(i̲d̲, title, content)
+events(i̲d̲, type, color)
+
+articles_events(#a̲r̲t̲i̲c̲l̲e̲_i̲d̲, #e̲v̲e̲n̲t̲_i̲d̲, d̲a̲t̲e̲)
